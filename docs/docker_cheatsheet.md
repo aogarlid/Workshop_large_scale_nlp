@@ -99,7 +99,7 @@ docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/e
 docker run -it -v /home/amia/tutorial/:/data nlpieumn/cnn PYTHONHASHSEED=0 python /home/tutorial/cnn.py
 ```
 
-## Other useful commands
+## Other useful commands:
 
 ### Run docker container using mlp as background daemon process
 
