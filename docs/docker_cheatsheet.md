@@ -14,8 +14,8 @@ NB: Also see [Docker Cheat Sheet](https://www.docker.com/sites/default/files/d8/
 
 
 ```
-# Notice the dot at the end (this specifies the directory in which Dockerfile is contained. 
-# Also, of note: target tells with block of code to use in the multi-stage build Dockerfile.
+# Notice the dot at the end (this specifies the directory in which Dockerfile is contained). 
+# Also, of note: target tells which block of code to use in the multi-stage build Dockerfile.
 
 docker build -t <image name> --target <target name> .
 
@@ -71,38 +71,40 @@ exit
 ### Example to run help to see available ml classifiers
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml /bin/bash -c python /home/tutorial/ml.py --help
+docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py --help
 ```
 
 ### Example to run default - svm - classifier
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml /bin/bash -c python /home/tutorial/ml.py -c svm
+docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c svm
 # note, svm is the default ml classifier and will be run if no arrgumet is given
 ```
 
 ### Example to run mlp classifier (or log/rf/bag/boost)
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml /bin/bash -c python /home/tutorial/ml.py -c mlp
+docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
 ```
 
 ### Example to run voting ML ensemble classifier
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml /bin/bash -c python /home/tutorial/ensemble.py
+docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ensemble.py
 ```
 
 ### Example to run cnn/keras classifier
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/cnn /bin/bash -c PYTHONHASHSEED=0 python /home/tutorial/cnn.py
+docker run -it -v /home/amia/tutorial/:/data nlpieumn/cnn PYTHONHASHSEED=0 python /home/tutorial/cnn.py
 ```
+
+## Other useful commands
 
 ### Run docker container using mlp as background daemon process
 
 ```
-docker run -d -it -v /home/amia/tutorial/:/data nlpieumn/ml /bin/bash -c python /home/tutorial/ml.py -c mlp
+docker run -d -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
 ```
 
 ### Stop daemon process container 
