@@ -57,7 +57,7 @@ kubectl describe pods dnstools
 kubectl logs dnstools
 ```
 
-## Dig for local cluster resources and get time to response for service/ep in default namespace by servicename.default
+## Lookup (dig) for local cluster resources and get time to response for service/ep in default namespace by servicename.default, using cluster name server for lookup (10.96.0.1)
 
 ```
 kubectl get services # get service name; NB: can specify as services and svc
@@ -65,7 +65,7 @@ kubectl get endpointp # show service endpoint; NB: can specify as ep
 kubectl exec -ti dnstools -- time dig @10.96.0.10 kubernetes.default #redirects DNS queries to local cluster DNS
 ```
 
-## Dig for local cluster resources and get time to response for service/ep in kube-system namespace by servicename.kube-system
+## Dig for local cluster resources (kube dns) and get time to response for service/ep in kube-system namespace by servicename.kube-system
 
 ```
 kubectl get service --namespace=kube-system # get service name
