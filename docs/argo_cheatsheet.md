@@ -46,5 +46,7 @@ argo get xxx-workflow-name-xxx #use the workflow id returned from the 'submit' c
 
 ```
 argo logs xxx-pod-name-xxx #from 'get' command above
+
+# equivalent command using kubectl
 kubectl logs xxx-pod-name-xxx -c main # query main container of pod for log
 ```
