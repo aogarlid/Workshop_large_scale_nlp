@@ -57,7 +57,7 @@
      # Advanced network diagnostics (using newly creeated pod) 
      # Usage: Determine if built-in kubernetes DNS is functioning properly
      
-     # Lookup (aka dig) a local cluster resources and get time to response for service/ep in kube-system namespace by servicename.kube-  system
+     # Lookup (aka dig) a local cluster resources and get time to response for service/ep in kube-system namespace by servicename.kube-system using cluster name server for lookup (10.96.0.1)
      # Check for internal kubernetes network communications functionality
      
      kubectl get service --namespace=kube-system # get service name from kube-system namespace
