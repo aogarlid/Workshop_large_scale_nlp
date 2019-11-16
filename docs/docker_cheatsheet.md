@@ -99,6 +99,12 @@ docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/e
 docker run -it -v /home/amia/tutorial/:/data nlpieumn/cnn PYTHONHASHSEED=0 python /home/tutorial/cnn.py
 ```
 
+### Example to run majority voting ensemble:
+
+```
+docker run -it -v /home/amia/tutorial/:/data nlpieumn/vote python /home/tutorial/vote.py
+```
+
 ## Other useful commands:
 
 ### Run docker container using mlp as background daemon process
@@ -107,14 +113,15 @@ docker run -it -v /home/amia/tutorial/:/data nlpieumn/cnn PYTHONHASHSEED=0 pytho
 docker run -d -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
 ```
 
-### Stop daemon process container 
+### Stop daemon (background) process container 
 (NB: use container id returned from previous step, or get from running “docker ps”)
+
 ```
 docker stop <conatiner id>
 ```
 
 ### Push to nlpieumn org repo 
-(NB: need to have adequate privs to do this!), specify version number `n`
+(NB: need to have nlpieumn organization privileges to do this), specify version number `n`
 
 ```
 docker push nlpieumn/ml
