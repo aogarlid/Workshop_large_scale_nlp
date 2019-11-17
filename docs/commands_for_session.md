@@ -64,9 +64,6 @@ Build the `vote` image from Dockerfile at target "vote":
     cd ~/tutorial
     ls -la
     less Dockerfile
-    
-Build image from Dockerfile at target = "vote" 
-
     docker build -t nlpieumn/vote --target vote . 
 
 ## 6. Let's use Kubernetes! 
