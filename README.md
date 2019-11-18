@@ -15,9 +15,9 @@ This workshop will provide attendees the information necessary to implement NLP 
 - `specs`: configuration files for argo/k8s.
 - `cloud`: configuration files for VM deployment.
 
-## View the slide deck (presented at the AMIA Symposium 2019 in Washington DC)
+## View the slide deck
 
-[Large Scale Ensembled NLP Systems with Docker and Kubernetes](https://tinyurl.com/W22-slides)
+[Large Scale Ensembled NLP Systems with Docker and Kubernetes: AMIA Symposium 2019](https://tinyurl.com/W22-slides)
 
 ## Contributors
 
