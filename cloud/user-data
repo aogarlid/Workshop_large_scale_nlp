@@ -16,7 +16,7 @@
    - git
    - nano
    - docker
-   - kubectl
+   - kubernetes-client
    - minikube
  runcmd:
    - echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
