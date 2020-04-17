@@ -5,8 +5,9 @@ auth=$(cat auth)
 tag="amiaW22"
 
 num_drops=$1
+start_num=${2:-1}
 
-for ((num=1;num<=num_drops;num++));
+for ((num=start_num;num<=num_drops;num++));
 do
 
     req=$(cat <<EOF
@@ -25,13 +26,18 @@ EOF
        )
     droplet=$(curl -sS -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${auth}" -d "$req" "https://api.digitalocean.com/v2/droplets" | jq -r ".droplet.id")
     confirm=$(curl -sS -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${auth}" -d "{\"resources\": [\"do:droplet:$droplet\"]}" "https://api.digitalocean.com/v2/projects/d4a30290-388a-4907-8a35-417feef5bf74/resources")
-
+    echo "$droplet"
 done
 
+pages=($1+19)/20
+
 ip_list=$(
-    for ip in $(curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${auth}" "https://api.digitalocean.com/v2/droplets?tag_name=$tag" | jq -r ".droplets|.[]|.networks|.v4|.[0]|.ip_address")
+    for ((page=1;page<=pages;page++));
     do
-        echo "$ip ansible_user=amia"
+        for ip in $(curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${auth}" "https://api.digitalocean.com/v2/droplets?page=$page&tag_name=$tag" | jq -r ".droplets|.[]|.networks|.v4|.[0]|.ip_address")
+        do
+            echo "$ip ansible_user=amia"
+        done
     done
        )
 
