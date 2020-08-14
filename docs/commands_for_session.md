@@ -3,7 +3,7 @@
 
 
 ## 1. Access the Virtual Machine (VM)
-     ssh amia@<your_ip_address>
+     ssh aime@<your_ip_address>
 
 The password is (case sensitive): `Tutorial2019`
 
