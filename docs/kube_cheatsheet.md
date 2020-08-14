@@ -46,7 +46,7 @@ kubectl get ep --namespace=kube-system # display kube-system namespace
 ## Create dnstools pod from spec
 
 ```
-kubectl create -f /home/amia/tutorial/specs/dnstools.yaml
+kubectl create -f /home/tutorial/specs/dnstools.yaml
 ```
 
 ## View pod details and logs
