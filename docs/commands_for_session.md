@@ -24,7 +24,7 @@ The use of `-la` to list current directory with full attributes, and `~/` is equ
 To look into the OS release, home directory and `/bin`: 
 
      cat /etc/os-release
-     ls /home/amia
+     ls /home/tutorial
      ls -la /bin
 
 ## 3. Basic Docker Commands (Docker build!)
@@ -53,7 +53,7 @@ To look into the OS release, home directory and `/bin`:
  3. Explore your docker image:
 
         cat /etc/os-release
-        ls /home/tutorial
+        ls /home/tutorial # equivalent to ls ~/
         ls /bin 
         exit   # when you're done
      
@@ -74,7 +74,7 @@ Build the `vote` image from Dockerfile at target "vote":
 
  2. List the config file that allows unprivileged user to run commands:
 
-        ls /home/amia/.kube 
+        ls /home/tutorial/.kube 
 
  3. List all pods in the default namespace, all namespaces and all services:
 
@@ -114,7 +114,8 @@ Check for internal kubernetes network communications functionality.
 
 The standalone script can also run as `python ~/tutorial/scripts/ml.py`. To run svm classifier from within the docker image:
 ```
-    docker run -it -e DOCKER='True' -v /home/amia/tutorial:/data nlpieumn/ml python /home/tutorial/ml.py -c svm
+    # NB: virttual mapped drives must be fully qualified
+    docker run -it -e DOCKER='True' -v /home/tutorial:/data nlpieumn/ml python /home/tutorial/ml.py -c svm
 ```
      
 ## 8. Let's use Argo!
@@ -125,12 +126,12 @@ The standalone script can also run as `python ~/tutorial/scripts/ml.py`. To run 
 
  2. Validate yaml file:
 
-        nano specs/evaluation.yaml 
-        argo lint specs/evaluation.yaml 
+        nano ~/specs/evaluation.yaml 
+        argo lint ~/specs/evaluation.yaml 
 
  3. Submit argo workflow spec and watch status in real time:
 
-        argo submit --watch specs/evaluation.yaml 
+        argo submit --watch ~/specs/evaluation.yaml 
 
  4. List workflow pods in workflow and view the logs:
 
