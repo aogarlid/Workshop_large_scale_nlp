@@ -1,9 +1,10 @@
 # Large Scale Ensembled NLP Systems with Docker and Kubernetes
 
-
+Workshop History:<br />
+https://aime20.aimedicine.info/index.php/tutorials-and-workshops<br />
 https://www.amia.org/amia2019/workshops
-<p>
-https://aime20.aimedicine.info/index.php/tutorials-and-workshops
+
+
 
 
 ## Introduction
