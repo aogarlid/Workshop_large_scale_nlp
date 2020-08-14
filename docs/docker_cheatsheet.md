@@ -54,7 +54,7 @@ docker run docker/whalesay cowsay "Hello W22"
 ### ssh into docker container
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml /bin/bash
+docker run -it -v /home/tutorial/:/data nlpieumn/ml /bin/bash
 ```
 
 #### Explore container
@@ -71,38 +71,38 @@ exit
 ### Example to run help to see available ml classifiers
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py --help
+docker run -it -v /home/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py --help
 ```
 
 ### Example to run default - svm - classifier
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c svm
+docker run -it -v /home/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c svm
 # note, svm is the default ml classifier and will be run if no arrgumet is given
 ```
 
 ### Example to run mlp classifier (or log/rf/bag/boost)
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
+docker run -it -v /home/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
 ```
 
 ### Example to run voting ML ensemble classifier
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ensemble.py
+docker run -it -v /home/tutorial/:/data nlpieumn/ml python /home/tutorial/ensemble.py
 ```
 
 ### Example to run cnn/keras classifier
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/cnn PYTHONHASHSEED=0 python /home/tutorial/cnn.py
+docker run -it -v /home/tutorial/:/data nlpieumn/cnn PYTHONHASHSEED=0 python /home/tutorial/cnn.py
 ```
 
 ### Example to run majority voting ensemble:
 
 ```
-docker run -it -v /home/amia/tutorial/:/data nlpieumn/vote python /home/tutorial/vote.py
+docker run -it -v /home/tutorial/:/data nlpieumn/vote python /home/tutorial/vote.py
 ```
 
 ## Other useful commands:
@@ -110,7 +110,7 @@ docker run -it -v /home/amia/tutorial/:/data nlpieumn/vote python /home/tutorial
 ### Run docker container using mlp as background daemon process
 
 ```
-docker run -d -it -v /home/amia/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
+docker run -d -it -v /home/tutorial/:/data nlpieumn/ml python /home/tutorial/ml.py -c mlp
 ```
 
 ### Stop daemon (background) process container 
