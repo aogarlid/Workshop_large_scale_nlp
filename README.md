@@ -2,6 +2,7 @@
 
 
 https://www.amia.org/amia2019/workshops
+<p>
 https://aime20.aimedicine.info/index.php/tutorials-and-workshops
 
 
