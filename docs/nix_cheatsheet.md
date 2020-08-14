@@ -3,7 +3,7 @@
 ## Connect to host as user `opensuse`
 
 ```
-ssh amia@<ip_address>
+ssh aime@<ip_address>
 ```
 
 ## Print working directory
@@ -22,7 +22,7 @@ ls -la
 
 
 ```
-ls -la /home/amia
+ls -la /home/tutorial 
 ```
 
 which is equivalent to
