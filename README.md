@@ -1,6 +1,8 @@
-# W22: Large Scale Ensembled NLP Systems with Docker and Kubernetes
+# Large Scale Ensembled NLP Systems with Docker and Kubernetes
+
 
 https://www.amia.org/amia2019/workshops
+https://aime20.aimedicine.info/index.php/tutorials-and-workshops
 
 
 ## Introduction
