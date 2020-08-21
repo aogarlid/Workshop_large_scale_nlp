@@ -21,7 +21,7 @@ This workshop will provide attendees the information necessary to implement NLP 
 
 ## View the slide deck
 
-[Large Scale Ensembled NLP Systems with Docker and Kubernetes: AMIA Symposium 2019](https://tinyurl.com/W22-slides)
+[Large Scale Ensembled NLP Systems with Docker and Kubernetes: AIME 2020](https://tinyurl.com/aime-2020)
 
 ## Contributors
 
