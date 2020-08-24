@@ -7,7 +7,7 @@ spec:
   volumes:
   - name: test-volume
     hostPath:
-      path: /home/amia/tutorial
+      path: /home/tutorial
   
   templates:
 
