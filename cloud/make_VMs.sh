@@ -14,7 +14,7 @@ do
 {"name":"tutorial.2020-${num}",
 "region":"nyc3",
 "size":"s-2vcpu-4gb",
-"image":53969279,
+"image":68993308,
 "ssh_keys":[22413657,6230202,6211596],
 "backups":false,
 "ipv6":false,
