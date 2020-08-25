@@ -1,11 +1,11 @@
-# W22: Large Scale Ensembled NLP Systems with Docker and Kubernetes
+# Large Scale Ensembled NLP Systems with Docker and Kubernetes
 ## AIME, Minneapolis, MN, 08/25/2020
 
 
 ## 1. Access the Virtual Machine (VM)
-     ssh aime@<your_ip_address>
+     ssh tutorial@<your_ip_address>
 
-The password is (case sensitive): `Tutorial2019`
+The password is (case sensitive): `Tutorial2020`
 
 ## 2. Explore your cloud image
 
@@ -19,12 +19,11 @@ Common Linux commands:
      nano   # a way to edit text
      vim    # another, more complicated way to edit text
 
-The use of `-la` to list current directory with full attributes, and `~/` is equivalent to `/home/amia`. 
+The use of `-la` to list current directory with full attributes, and `~/` is equivalent to `/home/tutorial`. 
 
-To look into the OS release, home directory and `/bin`: 
+To look into the OS release and `/bin`: 
 
      cat /etc/os-release
-     ls /home/tutorial
      ls -la /bin
 
 ## 3. Basic Docker Commands (Docker build!)
@@ -39,7 +38,7 @@ To look into the OS release, home directory and `/bin`:
 
 1. Run docker image's version of "Hello World": 
 
-        docker run docker/whalesay cowsay "Hello W22" 
+        docker run docker/whalesay cowsay "Hello Tutorial" 
      
 ## 4. Let's use Docker!
  1. Pull our ML image from the `nlpieumn` repository from Docker hub:
@@ -53,7 +52,6 @@ To look into the OS release, home directory and `/bin`:
  3. Explore your docker image:
 
         cat /etc/os-release
-        ls /home/tutorial # equivalent to ls ~/
         ls /bin 
         exit   # when you're done
      
@@ -61,7 +59,6 @@ To look into the OS release, home directory and `/bin`:
   
 Build the `vote` image from Dockerfile at target "vote":
 
-    cd ~/tutorial
     ls -la
     less Dockerfile
     docker build -t nlpieumn/vote --target vote . 
