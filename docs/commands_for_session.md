@@ -23,6 +23,7 @@ The use of `-la` to list current directory with full attributes, and `~/` is equ
 
 To look into the OS release and `/bin`: 
 
+     ls -la
      cat /etc/os-release
      ls -la /bin
 
@@ -50,7 +51,8 @@ To look into the OS release and `/bin`:
         docker run -it nlpieumn/ml /bin/bash 
      
  3. Explore your docker image:
-
+ 
+        ls -la
         cat /etc/os-release
         ls /bin 
         exit   # when you're done
@@ -109,7 +111,7 @@ Check for internal kubernetes network communications functionality.
 
 ## 7. Ensemble models for Word Sense Disambiguation (WSD) 
 
-The standalone script can also run as `python ~/tutorial/scripts/ml.py`. To run svm classifier from within the docker image:
+The standalone script can also run as `python ~/scripts/ml.py`. To run svm classifier from within the docker image:
 ```
     # NB: virttual mapped drives must be fully qualified
     docker run -it -e DOCKER='True' -v /home/tutorial:/data nlpieumn/ml python /home/tutorial/ml.py -c svm
