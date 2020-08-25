@@ -1,7 +1,7 @@
 #!/bin/bash
 
 auth=$(cat auth)
-tag="amiaW22"
+tag="tutorial"
 
 pages=($1+19)/20
 

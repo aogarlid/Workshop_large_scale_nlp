@@ -2,7 +2,7 @@
 
 userdata=$(cat user-data | jq -sR)
 auth=$(cat auth)
-tag="amiaW22"
+tag="tutorial"
 
 num_drops=$1
 start_num=${2:-1}
@@ -11,7 +11,7 @@ for ((num=start_num;num<=num_drops;num++));
 do
 
     req=$(cat <<EOF
-{"name":"amia.W22-${num}",
+{"name":"tutorial.2020-${num}",
 "region":"nyc3",
 "size":"s-2vcpu-4gb",
 "image":53969279,
@@ -36,7 +36,7 @@ ip_list=$(
     do
         for ip in $(curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${auth}" "https://api.digitalocean.com/v2/droplets?page=$page&tag_name=$tag" | jq -r ".droplets|.[]|.networks|.v4|.[0]|.ip_address")
         do
-            echo "$ip ansible_user=amia"
+            echo "$ip ansible_user=tutorial"
         done
     done
        )
